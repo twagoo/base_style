@@ -10,7 +10,7 @@ language: java
 jdk:
   - oraclejdk8
 env:
-  - STYLE_VERSION="0.1.2-dev" BOOTSTRAP_VER="3.3.7"
+  - STYLE_VERSION="0.1.2-dev3" BOOTSTRAP_VER="3.3.6"
 script:
   - sh -x ./build.sh
   - mvn clean deploy -Pcss-with-bootstrap --settings .maven-settings.xml
