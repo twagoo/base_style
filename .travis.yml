@@ -10,18 +10,22 @@ language: java
 jdk:
   - oraclejdk8
 env:
-  - STYLE_VERSION="0.1.2-dev" BOOTSTRAP_VER="3.3.6"
+  - STYLE_VERSION="0.1.2-dev5" BOOTSTRAP_VER="3.3.6"
 script:
   - sh -x ./build.sh
-  - mvn clean deploy -Pcss-with-bootstrap --settings .maven-settings.xml
-  - mvn clean deploy -Pless-with-bootstrap --settings .maven-settings.xml
-  - mvn clean deploy -Pless-without-bootstrap --settings .maven-settings.xml
+  - mvn clean
+  - mvn package -Pcss-with-bootstrap 
+  - mvn package -Pless-with-bootstrap
+  - mvn package -Pless-without-bootstrap
 deploy:
   api_key:
     secure: "$DEPLOY_OAUTH_TOKEN"
   file:
     - "release-${STYLE_VERSION}.tgz"
     - "variables.less"
+    - "target/base-style-${STYLE_VERSION}-css-with-bootstrap.jar"
+    - "target/base-style-${STYLE_VERSION}-less-with-bootstrap.jar"
+    - "target/base-style-${STYLE_VERSION}-less-with-bootstrap.jar"
   on:
     tags: true
   overwrite: true
