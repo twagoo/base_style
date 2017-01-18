@@ -6,7 +6,6 @@ addons:
     packages:
     - curl
     - bsdtar
-language: java
 jdk:
   - oraclejdk8
 env:
