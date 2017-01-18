@@ -4,7 +4,7 @@
     <groupId>eu.clarin.style</groupId>
     <artifactId>base-style</artifactId>
     <version>0.1.2-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <bootstrap.version>3.3.6</bootstrap.version>
@@ -96,6 +96,11 @@
                         </configuration>
                     </execution>
                 </executions>
+                
+                <!-- TODO: only build and/or deploy artifact with classifier 
+                    http://maven.40175.n5.nabble.com/Error-400-when-deploying-releases-to-Nexus-td3201051.html
+                -->
+                
             </plugin>
         </plugins>
     </build>
