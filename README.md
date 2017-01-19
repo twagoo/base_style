@@ -28,6 +28,9 @@ You can use the following artifact:
 <classifier>css-with-bootstrap</classifier>
 ```
 
+This can be used in combination with, for example, the [unpack goal of the maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)
+so that the CLARIN base style CSS or LESS is included among your resources before compiling or packaging. See the [VLO project](https://github.com/clarin-eric/VLO) for an example.
+
 JARs are also bundled with releases.
 
 If you would like to build one of these JARs yourself, pass the following parameters:

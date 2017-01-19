@@ -22,9 +22,9 @@ deploy:
   file:
     - "release-${STYLE_VERSION}.tgz"
     - "variables.less"
-    - "target/base-style-${STYLE_VERSION}-css-with-bootstrap.jar"
-    - "target/base-style-${STYLE_VERSION}-less-with-bootstrap.jar"
-    - "target/base-style-${STYLE_VERSION}-less-without-bootstrap.jar"
+    - "target-css-with-bootstrap/base-style-${STYLE_VERSION}-css-with-bootstrap.jar"
+    - "target-less-with-bootstrap/base-style-${STYLE_VERSION}-less-with-bootstrap.jar"
+    - "target-less-without-bootstrap/base-style-${STYLE_VERSION}-less-without-bootstrap.jar"
   on:
     tags: true
   overwrite: true

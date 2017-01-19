@@ -118,6 +118,7 @@
                 <jar.classifier>css-with-bootstrap</jar.classifier>
             </properties>
             <build>
+                <directory>target-css-with-bootstrap</directory>
                 <resources>
                     <resource>
                         <directory>${project.build.directory}/${project.build.finalName}</directory>
@@ -189,6 +190,7 @@
                 <jar.classifier>less-with-bootstrap</jar.classifier>
             </properties>
             <build>
+                <directory>target-less-with-bootstrap</directory>
                 <resources>
                     <resource>
                         <directory>${project.build.directory}/${project.build.finalName}</directory>
@@ -251,6 +253,7 @@
                 <jar.classifier>less-without-bootstrap</jar.classifier>
             </properties>
             <build>
+                <directory>target-less-without-bootstrap</directory>
                 <resources>
                     <resource>
                         <directory>.</directory>
