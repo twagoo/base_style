@@ -17,6 +17,16 @@ else
 	echo "Detected NON-SNAPSHOT version"
 	REPOSITORY="CLARIN"
 	REPOSITORY_URL=${REPOSITORY_URL_STABLE}
+
+	#only deploy on tag
+	if [ -z "${TRAVIS_TAG}" ]
+	then
+		echo "TRAVIS_TAG variable not set, skipping deployment"
+		exit 0
+	else
+		echo "Tag: ${TRAVIS_TAG}"
+	fi
+
 fi
 
 echo "Repository: ${REPOSITORY}" 
