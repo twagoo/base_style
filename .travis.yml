@@ -9,7 +9,7 @@ addons:
 jdk:
   - oraclejdk8
 env:
-  - STYLE_VERSION="0.1.2-SNAPSHOT" BOOTSTRAP_VER="3.3.6"
+  - STYLE_VERSION="0.1.2-dev13" BOOTSTRAP_VER="3.3.6"
 script:
   - sh -x ./build.sh
   - mvn clean
