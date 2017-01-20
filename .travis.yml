@@ -22,7 +22,7 @@ deploy:
     secure: "$DEPLOY_OAUTH_TOKEN"
   file:
     - "release-${STYLE_VERSION}.tgz"
-    - "variables.less"
+    - "src/main/less/variables.less"
     - "target-css-with-bootstrap/base-style-${STYLE_VERSION}-css-with-bootstrap.jar"
     - "target-less-with-bootstrap/base-style-${STYLE_VERSION}-less-with-bootstrap.jar"
     - "target-less-without-bootstrap/base-style-${STYLE_VERSION}-less-without-bootstrap.jar"
