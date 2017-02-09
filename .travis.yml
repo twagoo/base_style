@@ -23,6 +23,7 @@ deploy:
   file:
     - "release-${STYLE_VERSION}.tgz"
     - "src/main/less/variables.less"
+    - "src/main/less/clarin-additions.less"
     - "target-css-with-bootstrap/base-style-${STYLE_VERSION}-css-with-bootstrap.jar"
     - "target-less-with-bootstrap/base-style-${STYLE_VERSION}-less-with-bootstrap.jar"
     - "target-less-without-bootstrap/base-style-${STYLE_VERSION}-less-without-bootstrap.jar"
