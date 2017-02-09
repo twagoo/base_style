@@ -6,9 +6,9 @@ REPOSITORY_URL_SNAPSHOT="${REPOSITORY_URL_SNAPSHOT:-https://nexus.clarin.eu/cont
 REPOSITORY_URL_STABLE="${REPOSITORY_URL_STABLE:-https://nexus.clarin.eu/content/repositories/Clarin}"
 #from env: STYLE_VERSION (e.g. "0.1.3-SNAPSHOT")
 
-if [ "${TRAVIS_SECURE_ENV_VARS}" != "true" ]
+if [ -z "${NEXUS_DEPLOY_USERNAME}" ] || [ -z "${NEXUS_DEPLOY_PASSWORD}" ]
 then
-	echo "Secure environment variables not set. Skipping Maven deployment!"
+	echo "Nexus credentials not set. Skipping Maven deployment!"
 	exit 0;
 fi
 
