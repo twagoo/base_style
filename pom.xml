@@ -74,6 +74,8 @@
                                     <directory>src/main/less</directory>
                                     <includes>
                                         <include>variables.less</include>
+                                        <include>clarin-additions.less</include>
+                                        <include>clarin-bootstrap.less</include>
                                     </includes>
                                 </resource>
                             </resources>              
@@ -165,7 +167,7 @@
                             <compress>true</compress>
                             <force>true</force>
                             <includes>
-                                <include>bootstrap.less</include>
+                                <include>clarin-bootstrap.less</include>
                             </includes>
                         </configuration>
                         <executions>
@@ -247,7 +249,7 @@
         </profile>
         
         <profile>
-            <!-- Profile that creates an artifact that only contains the variables.less file -->
+            <!-- Profile that creates an artifact that only contains the CLARIN LESS files -->
             <id>less-without-bootstrap</id>
             <properties>
                 <jar.classifier>less-without-bootstrap</jar.classifier>
@@ -259,6 +261,8 @@
                         <directory>src/main/less</directory>
                         <includes>
                             <include>variables.less</include>
+							<include>clarin-additions.less</include>
+							<include>clarin-bootstrap.less</include>
                         </includes>
                     </resource>
                 </resources>
